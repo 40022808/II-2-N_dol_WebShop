@@ -1,30 +1,21 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-product-dialog',
   templateUrl: './product-dialog.component.html',
-  styleUrl: './product-dialog.component.css'
+  styleUrls: ['./product-dialog.component.css']
 })
-
-
 export class ProductDialogComponent {
-  product = {
-    id: '',
-    name: '',
-    price: 0,
-    description: '',
-    category: ''
-  };
-
+  @Input() product: any;
   @Output() save = new EventEmitter<any>();
   @Output() cancel = new EventEmitter<void>();
+  @Output() delete = new EventEmitter<void>();
 
   onSubmit(form: NgForm) {
     if (form.valid) {
       this.save.emit(this.product);
     } else {
-      
       this.markFormGroupTouched(form);
     }
   }
@@ -33,6 +24,11 @@ export class ProductDialogComponent {
     this.cancel.emit();
   }
 
+  onDelete() {
+    if (confirm(`Are you sure you want to delete ${this.product.name}?`)) {
+      this.delete.emit();
+    }
+  }
 
   private markFormGroupTouched(form: NgForm) {
     Object.values(form.controls).forEach(control => {
@@ -40,4 +36,3 @@ export class ProductDialogComponent {
     });
   }
 }
-

@@ -8,7 +8,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ProductComponent } from './product/product.component';
 import { ProductDialogComponent } from './product-dialog/product-dialog.component';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, provideHttpClient} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 
@@ -24,13 +24,12 @@ export function HttpLoaderFactory(http: any): TranslateHttpLoader { return new T
     ProductDialogComponent
   ],
   imports: [
-    HttpClientModule,
     FormsModule,
     BrowserModule,
     AppRoutingModule,
     TranslateModule.forRoot({loader:{ provide: TranslateLoader, useFactory: HttpLoaderFactory, deps: [HttpClient] } })
   ],
-  providers: [],
+  providers: [provideHttpClient()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

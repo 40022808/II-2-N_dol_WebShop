@@ -16,6 +16,8 @@
     "add":"Hozzáadás",
     "save":"Mentés",
     "cancel":"Mégsem",
-    "error":"Hiba!"
+    "error":"Hiba!",
+    "edit":"Szerkesztés",
+    "delete":"Törlés"
 }
  
