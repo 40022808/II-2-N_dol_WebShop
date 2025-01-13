@@ -1,0 +1,9 @@
+<nav>
+    <ul>
+        <li><a [routerLink]="['/', currentLang, 'home']">{{ 'Ye Shop' | translate }}</a></li>
+        <li><a [routerLink]="['/', currentLang, 'home']">{{ 'home' | translate }}</a></li>
+        <li><a [routerLink]="['/', currentLang, 'product']">{{'product' | translate }}</a></li>        
+        <li class="right"><a (click)="switchLang('en')">{{'English' | translate }}</a><span class="spacer"></span><a (click)="switchLang('hu')">{{'Hungarian' | translate }}</a></li>
+
+    </ul>
+</nav>

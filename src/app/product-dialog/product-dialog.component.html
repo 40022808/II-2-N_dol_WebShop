@@ -1,0 +1,43 @@
+<form #productForm="ngForm" (ngSubmit)="onSubmit(productForm)" class="product-dialog">
+    <div class="label">
+      <label for="id">id: </label>
+      <input id="id" [(ngModel)]="product.id" name="id" required #id="ngModel">
+      <div *ngIf="id.invalid && (id.dirty || id.touched)" class="error-message">
+        {{'error' | translate }}
+      </div>
+    </div>
+    <div class="label">
+      <label for="name">{{'Name' | translate }}: </label>
+      <input id="name" [(ngModel)]="product.name" name="name" required #name="ngModel">
+      <div *ngIf="name.invalid && (name.dirty || name.touched)" class="error-message">
+        {{'error' | translate }}
+      </div>
+    </div>
+    <div class="label">
+      <label for="price">{{'Price' | translate }}: </label>
+      <input id="price" [(ngModel)]="product.price" name="price" required #price="ngModel">
+      <div *ngIf="price.invalid && (price.dirty || price.touched)" class="error-message">
+        {{'error' | translate }}
+      </div>
+    </div>
+    <div class="label">
+      <label for="description">{{'Description' | translate }}: </label>
+      <textarea id="description" [(ngModel)]="product.description" name="description" required #description="ngModel"></textarea>
+      <div *ngIf="description.invalid && (description.dirty || description.touched)" class="error-message">
+        {{'error' | translate }}
+      </div>
+    </div>
+    <div class="label">
+      <label for="category">{{'Category' | translate }}: </label>
+      <input id="category" [(ngModel)]="product.category" name="category" required #category="ngModel">
+      <div *ngIf="category.invalid && (category.dirty || category.touched)" class="error-message">
+        {{'error' | translate }}
+      </div>
+    </div>
+    <div>
+        <button type="submit" class="button" [disabled]="productForm.invalid">{{'save' | translate }}</button>
+        <span class="spacer"></span>
+        <button type="button" (click)="onCancel()" class="button">{{'cancel' | translate }}</button>
+    </div>
+</form>
+

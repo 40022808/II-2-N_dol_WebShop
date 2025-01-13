@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    width: 100vw;
+    height: 93vh;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    background-image: linear-gradient(to bottom,#1b2947,#1b2947,#1b2947, #2b3152, #3b385d, #4c4067);
+}
+
+.container h1 {
+    font-size: 5vmin;
+    color: #f0da4f96;
+    animation: fadeInUp 1s ease forwards;
+}
+
+.container h1:hover {
+    color: #f0da4f;
+}
+
+@keyframes fadeInUp {
+    0% {
+      opacity: 0; 
+      transform: translateY(20px); 
+    }
+    100% {
+      opacity: 1; 
+      transform: translateY(0); 
+    }
+}
+
