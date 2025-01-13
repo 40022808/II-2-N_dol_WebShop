@@ -1,0 +1,23 @@
+{
+    "Ye Shop": "Ye Bolt",
+    "ADD_PRODUCT": "Termék hozzáadása",
+    "EDIT_PRODUCT": "Termék szerkesztése",
+    "DELETE_PRODUCT": "Termék törlése",
+    "home": "Kezdőlap",
+    "product": "Termék",
+    "Welcome to the Ye Shop!": "Üdvözöljük a Ye Bolt webáruházban!",
+    "English":"Angol",
+    "Hungarian":"Magyar",
+    "Name":"Név",
+    "Price":"Ár",
+    "Description":"Leírás",
+    "Category":"Kategória",
+    "Operations":"Műveletek",
+    "add":"Hozzáadás",
+    "save":"Mentés",
+    "cancel":"Mégsem",
+    "error":"Hiba!",
+    "edit":"Szerkesztés",
+    "delete":"Törlés"
+}
+ 
